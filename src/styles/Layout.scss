@@ -1,0 +1,210 @@
+// // // layout.module.scss
+// // @use './index' as *;  // Points to _index.scss
+
+// // .layout {
+// //   display: flex;
+// //   min-height: 100vh;
+// //   background-color: #f1f5f9;
+// // }
+
+// // .mainContent {
+// //   flex: 1;
+// //   margin-left: 280px;
+// //   transition: margin-left 0.3s ease;
+// //   padding: $spacing-md;
+// //   width: calc(100% - 280px);
+  
+// //   &.expanded {
+// //     margin-left: 80px;
+// //     width: calc(100% - 80px);
+// //   }
+  
+// //   @include responsive($breakpoint-tablet) {
+// //     margin-left: 0;
+// //     width: 100%;
+    
+// //     &.expanded {
+// //       margin-left: 0;
+// //       width: 100%;
+// //     }
+// //   }
+// // }
+
+
+// // // src/styles/layout.module.scss
+// // @use './index' as *;
+
+// // .layout {
+// //   display: flex;
+// //   min-height: 100vh;
+// //   background-color: #f1f5f9;
+// //   padding: 10px;
+// //   gap: 10px;
+// //   position: relative;
+// // }
+
+// // .mainContent {
+// //   flex: 1;
+// //   margin-left: 280px; // Match the sidebar width
+// //   transition: all 0.3s ease;
+// //   min-height: 100vh;
+// //   background-color: #f1f5f9;
+// //   padding: $spacing-md;
+  
+// //   &.expanded {
+// //     margin-left: 60px; // Match the collapsed sidebar width
+// //   }
+  
+// //   @include responsive($breakpoint-tablet) {
+// //     margin-left: 0;
+// //     width: 100%;
+    
+// //     &.expanded {
+// //       margin-left: 0;
+// //       width: 100%;
+// //     }
+// //   }
+// // }
+
+// // .app-container {
+// //   display: flex;
+// //   min-height: 100vh;
+// //   padding: 30px;
+// //   gap: 10px;
+// //   background-color: #f1f5f9;
+// //   overflow: hidden;
+// // }
+
+
+// // // src/styles/layout.module.scss
+// // @use './index' as *;
+
+// // .layout {
+// //   display: flex;
+// //   min-height: 100vh;
+// //   background-color: #f1f5f9;
+// //   padding: 10px;
+// //   gap: 10px;
+// //   position: relative;
+// // }
+
+// // .app-container {
+// //   display: flex;
+// //   min-height: 100vh;
+// //   padding: 10px;
+// //   gap: 10px;
+// //   background-color: #f1f5f9;
+// //     overflow: hidden;
+
+// // }
+
+// // .mainContent {
+// //   flex: 1;
+// //   margin-left: 326px; // Match the sidebar width
+// //   margin-top: 10px; // Match the top padding of sidebar
+// //   transition: all 0.3s ease;
+// //   min-height: calc(100vh - 20px); // Match sidebar height calculation
+// //   background-color: #f1f5f9;
+// //   padding: 0 $spacing-md;
+  
+// //   &.expanded {
+// //     margin-left: 108px; // Match the collapsed sidebar width
+// //   }
+  
+// //   @include responsive($breakpoint-tablet) {
+// //     margin-left: 0;
+// //     width: 100%;
+    
+// //     &.expanded {
+// //       margin-left: 0;
+// //       width: 100%;
+// //     }
+// //   }
+// // }
+
+
+
+// // src/styles/layout.module.scss
+// @use './index' as *;
+
+// .layout {
+//   display: flex;
+//   min-height: 100vh;
+//   background-color: #f1f5f9;
+//   padding: 10px;
+//   gap: 10px;
+//   position: relative;
+// }
+
+// .app-container {
+//   display: flex;
+//   min-height: 100vh;
+//   background-color: #f1f5f9;
+//   padding: 10px;
+// }
+
+// .mainContent {
+//   margin-left: 336px;  // sidebar width + gap
+//   transition: all 0.3s ease;
+//   width: calc(100% - 346px);  // viewport width - (sidebar width + padding)
+//   padding: 0;
+  
+//   &.expanded {
+//     margin-left: 118px;  // collapsed sidebar width + gap
+//     width: calc(100% - 128px);  // viewport width - (collapsed width + padding)
+//   }
+
+  
+//   @include responsive($breakpoint-tablet) {
+//     margin-left: 0;
+//     width: 100%;
+    
+//     &.expanded {
+//       margin-left: 0;
+//       width: 100%;
+//     }
+//   }
+// }
+
+/////ككك
+/// 
+/// 
+@use './index' as *;
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f1f5f9;
+  padding: 10px;
+  gap: 10px;
+  position: relative;
+}
+
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f1f5f9;
+  padding: 10px;
+}
+
+.mainContent {
+  margin-left: 336px;
+  transition: all 0.3s ease;
+  width: calc(100% - 346px);
+  padding: 0;
+  
+  &.expanded {
+    margin-left: 118px;
+    width: calc(100% - 128px);
+  }
+
+  @media screen and (max-width: $breakpoint-tablet) {
+    margin-left: 0;
+    width: 100%;
+    
+    &.expanded {
+      margin-left: 0;
+      width: 100%;
+    }
+  }
+}
