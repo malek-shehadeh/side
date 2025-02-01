@@ -107,6 +107,14 @@ import { KnowledgeBaseContent, SearchToolbar } from './KnowledgeBaseContent';
 import { KnowledgeBaseHeader } from './KnowledgeBaseHeader';
 import '../../styles/Base.scss';
 
+
+const HeaderSearchBox = () => {
+    return (
+      <div className="headerSearchBox">
+      
+      </div>
+    );
+  };
 const KnowledgeBaseLayout: React.FC = () => {
  const [searchTerm, setSearchTerm] = useState('');
  const [currentView, setCurrentView] = useState<'card' | 'list'>('card');
@@ -128,11 +136,14 @@ const KnowledgeBaseLayout: React.FC = () => {
    <div className="knowledgeBaseDashboard">
      <div className="container">
        <KnowledgeBaseHeader userName="User Name" />
+       <HeaderSearchBox />
+
        <SearchToolbar
          currentView={currentView}
          onViewChange={setCurrentView}
          onSearch={setSearchTerm}
        />
+       
        <KnowledgeBaseContent
          data={staticData}
          currentView={currentView}

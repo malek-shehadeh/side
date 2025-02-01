@@ -1,11 +1,422 @@
 
 
-//sidebar.scss
+// //sidebar.scss
+// @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700&display=swap');
+
+// body {
+//     font-family: 'Cairo', sans-serif;
+// }
+
+// /* Variables */
+// $sidebar-bg: #172554;  // Darker navy blue
+// $search-bg: rgba(239, 246, 255, 0.2);
+// $text-color: #fff;
+// $icon-color: #fff;
+// $blue-50: rgba(239, 246, 255, 1);
+
+
+
+// .sideMenuSingle {
+//   border-radius: 16px;
+//   background-color: $sidebar-bg;
+//   display: flex;
+//   width: 326px;
+//   height: calc(100vh - 30px);
+//   flex-direction: column;
+//   gap: 0;
+//   transition: width 0.3s ease;
+//   position: fixed;
+//   left: 10px;
+//   top: 10px;
+//   z-index: 10;
+//   overflow-x: hidden;
+//   &.collapsed {
+//     width: 108px !important;
+//     padding: 12px 0 0 0;
+//     height: calc(100vh - 42px);
+    
+    
+//     .sideMenuHeader {
+//       width: 100%;
+//       align-items: center;
+//       padding: 8px 0;
+//       gap: 16px;
+//       height: 124.71px;
+//     }
+    
+//     .logoSection {
+//       width: 76px !important;
+//       margin: 0 auto;
+//       padding: 6px 12px;
+//     }
+
+//     .arenaLogoContainer {
+//       width: 64px;
+//       justify-content: center;
+//       padding: 6px;
+//       margin: 0 auto;
+//     }
+    
+//     .collapseIcon {
+//       position: absolute;
+//       right: 8px;
+//       // &.rotated {
+//       //   transform: rotate(180deg);
+//       // }
+//     }
+    
+//     .menuItem {
+//       width: 64px;
+//       margin: 0 auto;
+//       padding: 12px;
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+      
+//       .menuIcon {
+//         margin: 0;
+//       }
+
+//       .menuItemText,
+//       .menuItemExpand {
+//         display: none;
+//       }
+//     }
+
+//     .menuTitle {
+//       padding: 50px 0 0 0;
+//       text-align: center;
+//       width: 100%;
+//     }
+
+//     .menuItems {
+//       padding: 50px 0 0 0;
+//       width: 100%;
+//       display: flex;
+//       align-items: center;
+//     }
+
+//     .searchBar {
+//       width: 60px;
+//       margin: 0 auto;
+      
+//       &.searchBarCollapsed {
+//         // max-width: 64px;
+//         // width: 76px ;
+//         // width: 60px ;
+
+//         padding: 8px;
+//         justify-content: center;
+        
+//         .searchLeft {
+//           justify-content: center;
+//           gap: 0;
+//         }
+
+//         .searchRight {
+//           display: none;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// .sideMenuHeader {
+//   width: 294px; 
+//   display: flex;
+//   flex-direction: column;
+//   gap: 16px;
+//   // padding: 8px 12px;
+//   padding: 16px;
+//   transition: width 0.3s ease;
+//   position: sticky;
+//   top: 0;
+//   background-color: $sidebar-bg;
+//   z-index: 10;
+// }
+
+// .logoSection {
+//   display: flex; 
+//   flex-shrink: 0; 
+//   flex-grow: 0; 
+//   padding: 6px 12px; 
+//   align-items: center; 
+//   justify-content: space-between;
+//   width: 294px; 
+//   height: auto; 
+//   min-height: 68.71px; 
+//   box-sizing: border-box; 
+//   margin: 0; 
+//   background-color: rgba(12, 26, 70, 1);
+//   border-radius: 12px;
+//   height: 56.71px;
+//   transition: width 0.3s ease;
+  
+//   img {
+//     width: 28px;
+//     height: 28px;
+//     object-fit: contain;
+//   }
+// }
+
+// .arenaLogoContainer {
+//   background-color: rgba(12, 26, 70, 1);
+//   border-radius: 12px;
+//   padding: 6px 6px;
+//   display: flex;
+//   align-items: center;
+//   gap: 10.96px;
+//   height: 56.71px;
+//   transition: all 0.3s ease;
+  
+//   img {
+//     width: 39.78px;
+//     height: 42.09px;
+//     object-fit: contain;
+//   }
+// }
+
+// .arenaLogoText {
+//   color: $blue-50;
+//   font-family: "Cairo", sans-serif;
+//   font-size: 29.24px;
+//   font-weight: 500;
+//   line-height: 45.69px;
+//   text-align: left;
+//   text-underline-position: from-font;
+//   text-decoration-skip-ink: none;
+//   transition: opacity 0.3s ease;
+// }
+
+// .collapseIcon {
+//   width: 28px;
+//   height: 28px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   background: none;
+//   border: none;
+//   cursor: pointer;
+//   color: #fff;
+//   padding: 8px;
+//   transition: transform 0.3s ease;
+
+//   img {
+//     width: 28px;
+//     height: 28px;
+//   }
+
+//   // &.rotated {
+//   //   transform: rotate(180deg);
+//   // }
+// }
+
+// .searchBar {
+//   border-radius: 8px;
+//   background-color: $search-bg;
+//   display: flex;
+//   max-width: 294px;
+//   height: 28px;
+//   padding: 8px 12px;
+//   gap: 0;
+//   align-items: center;
+//   justify-content: space-between;
+//   transition: all 0.3s ease;
+
+//   &.searchBarCollapsed {
+//     max-width: 76px;
+//     width: 76px;
+//     padding: 8px;
+//     justify-content: center;
+    
+//     .searchLeft {
+//       justify-content: center;
+//       gap: 0;
+//     }
+
+//     .searchRight {
+//       display: none;
+//     }
+//   }
+// }
+
+// .searchLeft {
+//   display: flex;
+//   align-items: center;
+//   gap: 12px;
+//   flex: 1;
+//   transition: all 0.3s ease;
+
+//   svg {
+//     width: 24px;
+//     height: 24px;
+//     color: $icon-color;
+//   }
+// }
+
+// .searchText {
+//   color: $text-color;
+//   font-family: "Cairo", sans-serif;
+//   font-size: 16px;
+//   font-weight: 500;
+//   line-height: 25px;
+//   text-align: left;
+//   background: transparent;
+//   border: none;
+//   outline: none;
+//   width: 100%;
+//   &::placeholder {
+//     color: rgba(239, 246, 255, 1);
+//   }
+// }
+
+// .searchRight {
+//   display: flex;
+//   align-items: center;
+//   gap: 6px;
+// }
+
+// .cmdKey,
+// .cmdKey2 {
+//   background-color: rgba(23, 37, 84, 0.6);
+//   border-radius: 4px;
+//   width: 23px;
+//   height: 23px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   color: $text-color;
+//   font-family: "Cairo", sans-serif;
+//   font-size: 12px;
+//   gap: 10px;
+// }
+
+// .mainMenu {
+//   display: flex;
+//   flex-direction: column;
+//   // gap: 8px;
+//   overflow-y: auto;
+//   height: calc(100% - 140px);
+//   width: 100%;
+//   overflow: hidden;
+//   white-space: nowrap;
+// }
+
+// .menuTitle {
+//   color: rgba(239, 246, 255, 1);
+//   padding: 0px 30px 0 30px;
+//   font-family: "cairo", sans-serif;
+//   font-size: 18px;
+//   font-weight: 500;
+//   gap: 24px;
+//   transition: padding 0.3s ease;
+// }
+
+// .menuItems {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 6px;
+//   transition: all 0.3s ease;
+//   width: 294px;
+//   padding: 8px 16px;
+//   overflow-x: hidden;
+
+//   &::-webkit-scrollbar {
+//     width: 6px;
+//   }
+  
+//   &::-webkit-scrollbar-track {
+//     background: rgba(239, 246, 255, 0.1);
+//     border-radius: 3px;
+//   }
+  
+//   &::-webkit-scrollbar-thumb {
+//     background: rgba(239, 246, 255, 0.2);
+//     border-radius: 3px;
+    
+//     &:hover {
+//       background: rgba(239, 246, 255, 0.3);
+//     }
+//   }
+// }
+
+// .menuItem {
+//   display: flex;
+//   padding: 8px 12px;
+//   align-items: center;
+//   gap: 12px;
+//   color: $text-color;
+//   font-weight: 500;
+//   cursor: pointer;
+//   transition: all 0.2s ease;
+//   white-space: nowrap;
+//   // width: 280px;
+//   // margin-left: 12px;
+//   border-radius: 12px;
+//   text-decoration: none; 
+
+//   &:hover {
+//     background-color: rgba(239, 246, 255, 0.2);
+//   }
+//   &.active {
+//     background-color: rgba(29, 78, 216, 1);
+//   }
+//   svg {
+//     width: 24px;
+//     height: 24px;
+//     color: $icon-color;
+//   }
+// }
+
+// .menuItemText {
+//   font-family: "Cairo", sans-serif;
+//   flex: 1;
+//   font-size: 16px;
+// }
+
+// .menuItemExpand {
+//   width: 20px;
+//   height: 20px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+  
+//   svg {
+//     width: 20px;
+//     height: 20px;
+//     color: $icon-color;
+//   }
+// }
+
+// .menuIcon {
+//   width: 24px;
+//   height: 24px;
+//   object-fit: contain;
+//   color: $icon-color;
+//   transition: margin 0.3s ease;
+// }
+
+// .visually-hidden {
+//   position: absolute;
+//   width: 1px;
+//   height: 1px;
+//   padding: 0;
+//   margin: -1px;
+//   overflow: hidden;
+//   clip: rect(0, 0, 0, 0);
+//   white-space: nowrap;
+//   border: 0;
+// }
+
+/////add menu
+/// 
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;700&display=swap');
 
 body {
     font-family: 'Cairo', sans-serif;
 }
+
+
 
 /* Variables */
 $sidebar-bg: #172554;  // Darker navy blue
@@ -13,26 +424,49 @@ $search-bg: rgba(239, 246, 255, 0.2);
 $text-color: #fff;
 $icon-color: #fff;
 $blue-50: rgba(239, 246, 255, 1);
+/* إضافة هذه الأنماط في بداية ملف Sidebar.scss */
+.sidebar-system {
+  position: relative;
+  display: flex;
+  gap: 12px;
+  height: 100%;
+}
 
-// .sideMenuSingle {
-//   border-radius: 16px;
-//   background-color: $sidebar-bg;
-//   display: flex;
-//   width: 326px;
-//   height: calc(100vh - 20px);
-//   // height: 972px;
-//   // padding: 2px;
-//   flex-direction: column;
-//   gap: 0;
-//   // margin-top: 20px;
-//   transition: width 0.3s ease;
-//   position: relative;
-//   overflow: hidden;
+.sideMenuSingle {
+  position: fixed;
+  transition: all 0.3s ease;
+  visibility: visible;
+  opacity: 1;
+  
+  &.main-sidebar {
+    left: 10px;
+    z-index: 10;
+  }
 
-//   &.collapsed {
-//     width: 108px !important;
-//     padding: 12px 0 0 0; 
-//     height: calc(100vh - 30px);
+  &.collapsed {
+    width: 108px !important;
+    .mainMenu {
+      opacity: 1;
+    }
+  }
+
+  &.hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.submenu {
+  position: fixed;
+  left: 120px; // المسافة بعد السايدبار المصغر
+  z-index: 11;
+  animation: slideIn 0.3s ease-out;
+}
+.sidebar-system {
+  position: relative;
+  z-index: 100;
+}
 
 .sideMenuSingle {
   border-radius: 16px;
@@ -42,17 +476,17 @@ $blue-50: rgba(239, 246, 255, 1);
   height: calc(100vh - 30px);
   flex-direction: column;
   gap: 0;
-  transition: width 0.3s ease;
+  transition: width 0.3s ease, transform 0.3s ease;
   position: fixed;
   left: 10px;
   top: 10px;
   z-index: 10;
   overflow-x: hidden;
+
   &.collapsed {
     width: 108px !important;
     padding: 12px 0 0 0;
     height: calc(100vh - 42px);
-    
     
     .sideMenuHeader {
       width: 100%;
@@ -78,13 +512,10 @@ $blue-50: rgba(239, 246, 255, 1);
     .collapseIcon {
       position: absolute;
       right: 8px;
-      // &.rotated {
-      //   transform: rotate(180deg);
-      // }
     }
     
     .menuItem {
-      width: 64px;
+      width: 33px;
       margin: 0 auto;
       padding: 12px;
       display: flex;
@@ -105,6 +536,7 @@ $blue-50: rgba(239, 246, 255, 1);
       padding: 50px 0 0 0;
       text-align: center;
       width: 100%;
+      display: none;
     }
 
     .menuItems {
@@ -112,6 +544,7 @@ $blue-50: rgba(239, 246, 255, 1);
       width: 100%;
       display: flex;
       align-items: center;
+      flex-direction: column;
     }
 
     .searchBar {
@@ -119,10 +552,6 @@ $blue-50: rgba(239, 246, 255, 1);
       margin: 0 auto;
       
       &.searchBarCollapsed {
-        // max-width: 64px;
-        // width: 76px ;
-        // width: 60px ;
-        
         padding: 8px;
         justify-content: center;
         
@@ -137,6 +566,63 @@ $blue-50: rgba(239, 246, 255, 1);
       }
     }
   }
+
+  &.submenu {
+    left: 120px;
+    z-index: 9;
+    animation: slideIn 0.3s ease-out;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
+    .submenuTitle {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: $text-color;
+      font-size: 18px;
+      font-weight: 500;
+      padding: 0 12px;
+      
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+
+    .menuItems {
+      padding-top: 16px;
+    }
+
+    .menuItem {
+      padding-left: 24px;
+      transition: all 0.2s ease;
+      
+      &:hover {
+        background-color: rgba(239, 246, 255, 0.2);
+        padding-left: 28px;
+      }
+    }
+
+    .back-button {
+      cursor: pointer;
+      padding: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: $text-color;
+      font-size: 16px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+      
+      &:hover {
+        opacity: 0.8;
+      }
+
+      img {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }
 }
 
 .sideMenuHeader {
@@ -144,7 +630,6 @@ $blue-50: rgba(239, 246, 255, 1);
   display: flex;
   flex-direction: column;
   gap: 16px;
-  // padding: 8px 12px;
   padding: 16px;
   transition: width 0.3s ease;
   position: sticky;
@@ -161,13 +646,11 @@ $blue-50: rgba(239, 246, 255, 1);
   align-items: center; 
   justify-content: space-between;
   width: 294px; 
-  height: auto; 
-  min-height: 68.71px; 
+  height: 68.71px; 
   box-sizing: border-box; 
   margin: 0; 
   background-color: rgba(12, 26, 70, 1);
   border-radius: 12px;
-  height: 56.71px;
   transition: width 0.3s ease;
   
   img {
@@ -184,8 +667,8 @@ $blue-50: rgba(239, 246, 255, 1);
   display: flex;
   align-items: center;
   gap: 10.96px;
-  height: 56.71px;
-  transition: all 0.3s ease;
+  // height: 56.71px;
+  // transition: all 0.3s ease;
   
   img {
     width: 39.78px;
@@ -201,8 +684,6 @@ $blue-50: rgba(239, 246, 255, 1);
   font-weight: 500;
   line-height: 45.69px;
   text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
   transition: opacity 0.3s ease;
 }
 
@@ -223,10 +704,6 @@ $blue-50: rgba(239, 246, 255, 1);
     width: 28px;
     height: 28px;
   }
-
-  // &.rotated {
-  //   transform: rotate(180deg);
-  // }
 }
 
 .searchBar {
@@ -312,11 +789,11 @@ $blue-50: rgba(239, 246, 255, 1);
 .mainMenu {
   display: flex;
   flex-direction: column;
-  // gap: 8px;
   overflow-y: auto;
   height: calc(100% - 140px);
   width: 100%;
-  
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .menuTitle {
@@ -367,21 +844,23 @@ $blue-50: rgba(239, 246, 255, 1);
   cursor: pointer;
   transition: all 0.2s ease;
   white-space: nowrap;
-  // width: 280px;
-  // margin-left: 12px;
   border-radius: 12px;
   text-decoration: none; 
 
   &:hover {
     background-color: rgba(239, 246, 255, 0.2);
   }
+  
   &.active {
     background-color: rgba(29, 78, 216, 1);
   }
-  svg {
-    width: 24px;
-    height: 24px;
-    color: $icon-color;
+  // إضافة حالة active جديدة للعناصر التي لها submenu مفتوح
+  &.submenu-active {
+    background-color: rgba(29, 78, 216, 1);
+    
+    .menuItemExpand {
+      transform: rotate(45deg);
+    }
   }
 }
 
@@ -398,10 +877,9 @@ $blue-50: rgba(239, 246, 255, 1);
   align-items: center;
   justify-content: center;
   
-  svg {
+  img {
     width: 20px;
     height: 20px;
-    color: $icon-color;
   }
 }
 
@@ -423,4 +901,15 @@ $blue-50: rgba(239, 246, 255, 1);
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }

@@ -309,9 +309,13 @@ export interface BaseSearchBarProps {
     isOpen: boolean;
     onClose: () => void;
     title?: string;
+      subtitle?: string; // إضافة جديدة للعنوان الفرعي
+
     children: React.ReactNode;
     size?: 'small' | 'medium' | 'large';
     footer?: React.ReactNode;
+    showCloseButton?: boolean; // إضافة جديدة لزر الإغلاق
+
   }
   
 //   // Table Types
@@ -366,3 +370,18 @@ export interface BaseSearchBarProps {
   export type DeepPartial<T> = {
     [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];
   };
+
+  ///////button
+
+  // src/types/addCollection.types.ts
+export interface AddNewCollectionProps {
+    onClose: () => void;
+  }
+  
+  export interface FormData {
+    name: string;
+    description: string;
+    tags: string;
+    accessLevel: string;
+    thumbnail: File | null;
+  }
